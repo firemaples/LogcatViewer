@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="lib/jquery/jquery-2.2.4.min.js"></script>
+    <script src="lib/moment-2.14.1/moment.js"></script>
+    <!-- Material Design fonts -->
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap-material-design-dist/css/googlefont.css">
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap-material-design-dist/css/googleicons.css">
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Material Design http://fezvrasta.github.io/bootstrap-material-design/ -->
+    <!--
+    <link rel="stylesheet" type="text/css" href="dist/css/bootstrap-material-design.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/ripples.min.css">
+-->
+    <!-- https://github.com/ehpc/bootstrap-waitingfor  -->
+    <script src="lib/waiting-for-dialog/bootstrap-waitingfor.js"></script>
+    <!--  http://eonasdan.github.io/bootstrap-datetimepicker/  -->
+    <script src="lib/bootstrap-datetimepicker-4.17.37/bootstrap-datetimepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/logcatViewer.css">
+    <script src="script/logcatViewer.js"></script>
+</head>
+
+<body>
+    <div id="error_scriptNotAllowBlock" class="scriptNotAllowBlock" style="color: red !important;margin-bottom: 8px;"> <span style="color: red !important;">If you can see this message, means the server not support script to execute.</span>
+        <br> <span style="color: red !important;">If current is run on jenkins server, please run follow script on jenkins server and clear browser cache:</span>
+        <br> <span style="color: red !important;">System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "script-src 'self' 'unsafe-inline';")</span> </div>
+    <div class="headerBar">
+        <div class="form-inline">
+            <div class="form-group">
+                <div class='input-group date' id='beginTime'>
+                    <input type='text' class="form-control" placeholder="MM/dd HH:mm:ss.SSS" /> <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span> </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class='input-group date' id='endTime'>
+                    <input type='text' class="form-control" placeholder="MM/dd HH:mm:ss.SSS" /> <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span> </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="dropdown">
+                    <button class="btn btn-danger dropdown-toggle bg-danger" type="button" id="dd_type" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> Error <span class="caret"></span> </button>
+                    <ul class="dropdown-menu" aria-labelledby="dd_type">
+                        <li data-btn-color="btn-default"><a href="#" data-short="V">Verbose</a></li>
+                        <li data-btn-color="btn-info" class="bg-info"><a href="#" data-short="D">Debug</a></li>
+                        <li data-btn-color="btn-success" class="bg-success"><a href="#" data-short="I">Info</a></li>
+                        <li data-btn-color="btn-warning" class="bg-warning"><a href="#" data-short="W">Warn</a></li>
+                        <li data-btn-color="btn-danger" class="bg-danger"><a href="#" data-short="E">Error</a></li>
+                        <li data-btn-color="btn-danger" class="bg-danger"><a href="#" data-short="A">Assert</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></div>
+                    <input type="text" class="form-control" id="inp_filter">
+                    <div id="clearFilterText" class="input-group-addon btn">X</div>
+                </div>
+            </div>
+            <button id="bt_filter" type="button" class="btn btn-primary">Filter</button> <span id="resultCount"></span> </div>
+    </div>
+    <div id="logcatWrapper"></div>
+</body>
+
+</html>

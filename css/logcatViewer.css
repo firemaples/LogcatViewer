@@ -1,0 +1,32 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
+.headerBar {
+    padding: 4px 10px;
+    float: left;
+    position: fixed;
+    background: white;
+    width: 100%;
+}
+
+#logcatWrapper {
+    padding-top: 250px;
+}
+
+@media (min-width: 768px) {
+    #logcatWrapper {
+        padding-top: 50px;
+    }
+}
+
+#logcatWrapper td {
+    padding: 0 4px;
+    text-align: center;
+}
+
+#logcatWrapper td.msg {
+    text-align: left;
+}
