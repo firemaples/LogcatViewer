@@ -10,7 +10,7 @@ logcatViewer.html?file=logcat.txt&type=Error&startTime=08-27 18:53:01.789&endTim
 
 # Params:
 
- * __file__: Path of logcat recording file
+ * __file__: Path of logcat record file
  * __type__: Default type of record for filter, can be changed with Verbose/Debug/Info/Warn/Error/Assert
  * __startTime__: Default start time of record for filter, format with {MM-dd HH:mm:ss.SSS} 
  * __endTime__: Default end time of record for filter, format with {MM-dd HH:mm:ss.SSS}
